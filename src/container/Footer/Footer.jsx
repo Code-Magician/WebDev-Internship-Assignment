@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
-import { client } from '../../client';
+// import { client } from '../../client';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import './Footer.scss';
@@ -13,26 +13,26 @@ const Footer = () => {
     const { username, email, message } = formData;
 
     const handleChangeInput = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        // const { name, value } = e.target;
+        // setFormData({ ...formData, [name]: value });
     };
 
     const handleSubmit = () => {
-        setLoading(true);
+        // setLoading(true);
 
-        const contact = {
-            _type: 'contact',
-            name: formData.username,
-            email: formData.email,
-            message: formData.message,
-        };
+        // const contact = {
+        //     _type: 'contact',
+        //     name: formData.username,
+        //     email: formData.email,
+        //     message: formData.message,
+        // };
 
-        client.create(contact)
-            .then(() => {
-                setLoading(false);
-                setIsFormSubmitted(true);
-            })
-            .catch((err) => console.log(err));
+        // client.create(contact)
+        //     .then(() => {
+        //         setLoading(false);
+        //         setIsFormSubmitted(true);
+        //     })
+        //     .catch((err) => console.log(err));
     };
 
     return (
